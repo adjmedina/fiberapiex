@@ -12,7 +12,8 @@ Esta Funcion es la encargada de inyectar a la app las diferentes rutas que el si
 func Setup(app *fiber.App) {
 
 	//Ruta Main
-	app.Get("/", controllers.Main)
+	app.Get("/", controllers.Index)
+	app.Get("/main", controllers.Main)
 	// Rutas para usuarios
 	app.Post("/users", controllers.CreateUser)
 	app.Get("/users", controllers.GetUser)
